@@ -355,7 +355,7 @@
 
   <!-- รุ่น 12 -->
   <div class="section-label">
-    <span class="gen-badge">รุ่นที่ 12 · 十二世 · 德</span>
+    <span class="gen-badge">รุ่นที่ 12 · 十二世 · 德 · คุณธรรม, ความดีงาม, ศีลธรรม</span>
     <div class="gen-line"></div>
   </div>
   <div class="note-box" style="margin-bottom:12px;">
@@ -374,7 +374,7 @@
 
   <!-- รุ่น 13 -->
   <div class="section-label">
-    <span class="gen-badge">รุ่นที่ 13 · 十三世 · 岐</span>
+    <span class="gen-badge">รุ่นที่ 13 · 十三世 · 岐 · เส้นทางที่แผ่ขยาย, ภูเขาสูง</span>
     <div class="gen-line"></div>
   </div>
   <div class="note-box" style="margin-bottom:12px;">
@@ -399,7 +399,7 @@
 
   <!-- รุ่น 14 -->
   <div class="section-label">
-    <span class="gen-badge">รุ่นที่ 14 · 十四世 · 凤</span>
+    <span class="gen-badge">รุ่นที่ 14 · 十四世 · 凤 · หงส์, มงคล</span>
     <div class="gen-line"></div>
   </div>
   <div class="note-box" style="margin-bottom:12px;">
@@ -420,7 +420,7 @@
 
   <!-- รุ่น 15 -->
   <div class="section-label">
-    <span class="gen-badge">รุ่นที่ 15 · 十五世 · 永</span>
+    <span class="gen-badge">รุ่นที่ 15 · 十五世 · 永 · นิรันดร์</span>
     <div class="gen-line"></div>
   </div>
 
@@ -469,13 +469,24 @@
   <!-- รุ่น 16 -->
   <div id="gen16-section" style="display:none;">
     <div class="section-label">
-      <span class="gen-badge">รุ่นที่ 16 · 十六世 · 鸣</span>
+      <span class="gen-badge">รุ่นที่ 16 · 十六世 · 鸣/明 · ก้องกังวาน / แสงสว่าง</span>
       <div class="gen-line"></div>
     </div>
     <div class="section-label" style="margin-top:-8px; margin-bottom:12px;">
       <span id="gen16-parent-label" style="font-size:12px; color:var(--text-muted); padding-left:4px;"></span>
     </div>
     <div id="gen16-children" class="siblings-row"></div>
+  </div>
+
+  <div class="arrow-down" id="arrow17" style="display:none;">↓</div>
+
+  <!-- รุ่น 17 -->
+  <div id="gen17-section" style="display:none;">
+    <div class="section-label">
+      <span class="gen-badge">รุ่นที่ 17 · 十七世 · 礼 · มารยาท, ประเพณี</span>
+      <div class="gen-line"></div>
+    </div>
+    <div id="gen17-children" class="siblings-row"></div>
   </div>
 
   <script>
@@ -494,6 +505,11 @@
       'สมทรง':   { cards: ['?','?','?','?','?'], gender: ['gray','gray','gray','gray','gray'] },
     };
 
+    const gen17Data = {
+      'ณัฐ': { cards: ['?'], gender: ['gray'] },
+      'หมิว': { cards: ['?','?'], gender: ['gray','gray'] },
+    };
+
     let activeBtn = null;
 
     function showGen16(name, btn) {
@@ -507,14 +523,52 @@
 
       label.textContent = (data.note ? name + ' · ' + data.note : '');
 
+      container.innerHTML = data.cards.map((c, i) => {
+        const hasGen17 = gen17Data[c];
+        return `<div class="card card-${data.gender[i]}" style="text-align:center; min-width:80px; cursor:${hasGen17 ? 'pointer' : 'default'};" ${hasGen17 ? `onclick="showGen17('${c}', this)"` : ''}>
+          <div class="name-th">${c}</div>
+        </div>`;
+      }).join('');
+
+      document.getElementById('gen16-section').style.display = 'block';
+      document.getElementById('arrow16').style.display = 'block';
+      document.getElementById('gen17-section').style.display = 'none';
+      document.getElementById('arrow17').style.display = 'none';
+    }
+
+    function showGen17(name, el) {
+      // reset previous active gen16 card
+      document.querySelectorAll('#gen16-children .card').forEach(c => {
+        c.style.background = '';
+        c.style.color = '';
+        c.style.borderColor = '';
+        c.style.boxShadow = '';
+      });
+      // highlight color based on gender
+      const isFemale = el.classList.contains('card-pink');
+      if (isFemale) {
+        el.style.background = 'var(--pink-400)';
+        el.style.color = '#fff';
+        el.style.borderColor = 'var(--pink-400)';
+        el.style.boxShadow = '0 4px 12px rgba(244,114,182,0.35)';
+      } else {
+        el.style.background = 'var(--blue-400)';
+        el.style.color = '#fff';
+        el.style.borderColor = 'var(--blue-400)';
+        el.style.boxShadow = '0 4px 12px rgba(74,158,232,0.35)';
+      }
+
+      const data = gen17Data[name];
+      const container = document.getElementById('gen17-children');
+
       container.innerHTML = data.cards.map((c, i) =>
         `<div class="card card-${data.gender[i]}" style="text-align:center; min-width:80px;">
           <div class="name-th">${c}</div>
         </div>`
       ).join('');
 
-      document.getElementById('gen16-section').style.display = 'block';
-      document.getElementById('arrow16').style.display = 'block';
+      document.getElementById('gen17-section').style.display = 'block';
+      document.getElementById('arrow17').style.display = 'block';
     }
   </script>
 
@@ -523,10 +577,27 @@
     ข้อมูลจากแผนภูมิ 丰俊公房世馨公之德英公世系
   </div>
 
+  <!-- ประวัติแซ่ 吳 -->
+  <div style="margin-top:32px;">
+    <div class="section-label">
+      <span class="gen-badge">ประวัติแซ่ 吳</span>
+      <div class="gen-line"></div>
+    </div>
+    <div style="background:white; border-radius:14px; padding:20px 24px; box-shadow:var(--shadow); border:1px solid var(--border); line-height:1.9; color:var(--text);">
+      <div style="font-size:28px; font-weight:700; font-family:'Noto Sans TC',sans-serif; margin-bottom:4px; color:var(--teal-800);">吳 · Ng (งฺ)</div>
+      <div style="font-size:12px; color:var(--text-muted); margin-bottom:16px;">สำเนียงแคะ · แซ่อันดับที่ 10 ของจีน · มีประวัติกว่า 2,600 ปี</div>
+
+      <p style="margin-bottom:12px;">แซ่ 吳 สืบเชื้อสายจากวงศ์ 姬 ซึ่งเป็นลูกหลานตรงของ <strong>黄帝 (จักรพรรดิเหลือง)</strong> โดยมีต้นกำเนิดจาก <strong>太伯 (ไท่โป)</strong> และ <strong>仲雍 (จ้งยง)</strong> สองพี่น้องที่สละราชสมบัติให้น้องชาย แล้วอพยพลงใต้ตั้งอาณาจักร <strong>句吳</strong> ขึ้นในแถบเจียงหนาน <a href="https://zh.wikipedia.org/wiki/%E5%90%B4%E5%A7%93" target="_blank" style="color:var(--teal-400); font-size:11px;">[Wikipedia]</a></p>
+
+      <p style="margin-bottom:12px;">เมื่ออาณาจักรอู๋ถูก <strong>越国 (เวียดนามโบราณ)</strong> ทำลายในปี 473 ก่อนคริสตกาล ลูกหลานจึงใช้ชื่ออาณาจักรเป็นแซ่ว่า <strong>吳</strong> มีประวัติกว่า 2,600 ปี <a href="https://zh.wikipedia.org/wiki/%E5%90%B4%E5%A7%93" target="_blank" style="color:var(--teal-400); font-size:11px;">[Wikipedia]</a></p>
+
+    </div>
+  </div>
+
 </div>
 
 <footer>
-  แผนภูมิวงศ์ตระกูล · 族谱 · 丰顺县 มณฑลกวางตุ้ง · สำเนียงแคะ
+  johthiti@hotmail.com
 </footer>
 
 </body>
