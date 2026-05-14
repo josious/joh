@@ -423,173 +423,100 @@
     <span class="gen-badge">รุ่นที่ 15 · 十五世 · 永</span>
     <div class="gen-line"></div>
   </div>
-  <div class="gen15-grid">
-    <div class="card card-blue"><div class="name-th">สุมิตร</div></div>
-    <div class="card card-blue"><div class="name-th">ก้อง</div></div>
-    <div class="card card-blue"><div class="name-th">ยุทธ</div></div>
-    <div class="card card-pink"><div class="name-th">แสงสุรีย์</div></div>
-    <div class="card card-blue"><div class="name-th">ถนัด</div></div>
-    <div class="card card-pink"><div class="name-th">เสี่ยมถอ</div></div>
-    <div class="card card-blue"><div class="name-th">เกียรติ</div></div>
-    <div class="card card-blue highlighted">
-      <div class="name-th">เจน</div>
-    </div>
-    <div class="card card-blue"><div class="name-th">ก๊า</div></div>
-    <div class="card card-blue"><div class="name-th">เสียง</div></div>
-    <div class="card card-blue"><div class="name-th">ชัยยา</div></div>
-    <div class="card card-pink"><div class="name-th">สมทรง</div></div>
-  </div>
-
-<div class="arrow-down">↓</div>
-
-  <!-- รุ่น 16 -->
-  <div class="section-label">
-    <span class="gen-badge">รุ่นที่ 16 · 十六世 · 鸣</span>
-    <div class="gen-line"></div>
-  </div>
 
   <style>
-    .gen16-family { margin-bottom: 20px; }
-    .gen16-family .parent-label {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-      padding-left: 4px;
-    }
-    .gen16-family .children-row {
+    .gen15-selector {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+      justify-content: center;
     }
-    .gen16-family .children-row .card {
-      min-width: 70px;
-      text-align: center;
-      padding: 10px 8px;
+    .gen15-btn {
+      padding: 10px 16px;
+      border-radius: 14px;
+      border: 1.5px solid transparent;
+      cursor: pointer;
+      font-family: 'IBM Plex Sans Thai', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all 0.2s;
+      box-shadow: var(--shadow);
     }
+    .gen15-btn.male { background: var(--blue-50); border-color: #B3D7F8; color: var(--blue-800); }
+    .gen15-btn.female { background: var(--pink-50); border-color: #F9C0DC; color: var(--pink-800); }
+    .gen15-btn.active.male { background: var(--blue-400); color: #fff; border-color: var(--blue-400); }
+    .gen15-btn.active.female { background: var(--pink-400); color: #fff; border-color: var(--pink-400); }
+    .gen15-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.10); }
   </style>
 
-  <!-- สุมิตร: 3 คน -->
-  <div class="gen16-family">
-    <div class="parent-label">ลูก สุมิตร</div>
-    <div class="children-row">
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-    </div>
+  <div class="gen15-selector">
+    <button class="gen15-btn male"     onclick="showGen16('สุมิตร',   this)">สุมิตร</button>
+    <button class="gen15-btn male"     onclick="showGen16('ก้อง',     this)">ก้อง</button>
+    <button class="gen15-btn male"     onclick="showGen16('ยุทธ',     this)">ยุทธ</button>
+    <button class="gen15-btn female"   onclick="showGen16('แสงสุรีย์',this)">แสงสุรีย์</button>
+    <button class="gen15-btn male"     onclick="showGen16('ถนัด',     this)">ถนัด</button>
+    <button class="gen15-btn female"   onclick="showGen16('เสี่ยมถอ', this)">เสี่ยมถอ</button>
+    <button class="gen15-btn male"     onclick="showGen16('เกียรติ',  this)">เกียรติ</button>
+    <button class="gen15-btn male"     onclick="showGen16('เจน',      this)">เจน</button>
+    <button class="gen15-btn male"     onclick="showGen16('ก๊า',      this)">ก๊า</button>
+    <button class="gen15-btn male"     onclick="showGen16('เสียง',    this)">เสียง</button>
+    <button class="gen15-btn male"     onclick="showGen16('ชัยยา',    this)">ชัยยา</button>
+    <button class="gen15-btn female"   onclick="showGen16('สมทรง',   this)">สมทรง</button>
   </div>
 
-  <!-- ก้อง: 3 คน -->
-  <div class="gen16-family">
-    <div class="parent-label">ลูก ก้อง</div>
-    <div class="children-row">
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
+  <div class="arrow-down" id="arrow16" style="display:none;">↓</div>
+
+  <!-- รุ่น 16 -->
+  <div id="gen16-section" style="display:none;">
+    <div class="section-label">
+      <span class="gen-badge">รุ่นที่ 16 · 十六世 · 鸣</span>
+      <div class="gen-line"></div>
     </div>
+    <div class="section-label" style="margin-top:-8px; margin-bottom:12px;">
+      <span id="gen16-parent-label" style="font-size:12px; color:var(--text-muted); padding-left:4px;"></span>
+    </div>
+    <div id="gen16-children" class="siblings-row"></div>
   </div>
 
-  <!-- ยุทธ: 3 คน -->
-  <div class="gen16-family">
-    <div class="parent-label">ลูก ยุทธ</div>
-    <div class="children-row">
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-    </div>
-  </div>
+  <script>
+    const gen16Data = {
+      'สุมิตร':    { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
+      'ก้อง':     { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
+      'ยุทธ':     { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
+      'แสงสุรีย์':{ cards: ['?','?','?','?','?','?'], gender: ['gray','gray','gray','gray','gray','gray'] },
+      'ถนัด':     { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
+      'เสี่ยมถอ': { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
+      'เกียรติ':  { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
+      'เจน':      { cards: ['โจ้','โต้ง','ณัฐ','หมิว'], gender: ['blue','blue','blue','pink'], note: 'คู่สมรส: หลัน' },
+      'ก๊า':      { cards: ['?','?'], gender: ['gray','gray'] },
+      'เสียง':    { cards: ['?','?'], gender: ['gray','gray'] },
+      'ชัยยา':    { cards: ['?','?'], gender: ['gray','gray'] },
+      'สมทรง':   { cards: ['?','?','?','?','?'], gender: ['gray','gray','gray','gray','gray'] },
+    };
 
-  <!-- แสงสุรีย์: 6 คน -->
-  <div class="gen16-family">
-    <div class="parent-label">ลูก แสงสุรีย์</div>
-    <div class="children-row">
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-    </div>
-  </div>
+    let activeBtn = null;
 
-  <!-- ถนัด: 3 คน -->
-  <div class="gen16-family">
-    <div class="parent-label">ลูก ถนัด</div>
-    <div class="children-row">
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-    </div>
-  </div>
+    function showGen16(name, btn) {
+      if (activeBtn) activeBtn.classList.remove('active');
+      btn.classList.add('active');
+      activeBtn = btn;
 
-  <!-- เสี่ยมถอ: 3 คน -->
-  <div class="gen16-family">
-    <div class="parent-label">ลูก เสี่ยมถอ</div>
-    <div class="children-row">
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-    </div>
-  </div>
+      const data = gen16Data[name];
+      const container = document.getElementById('gen16-children');
+      const label = document.getElementById('gen16-parent-label');
 
-  <!-- เกียรติ: 3 คน -->
-  <div class="gen16-family">
-    <div class="parent-label">ลูก เกียรติ</div>
-    <div class="children-row">
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-    </div>
-  </div>
+      label.textContent = (data.note ? name + ' · ' + data.note : '');
 
-  <!-- เจน: 4 คน -->
-  <div class="gen16-family">
-    <div class="parent-label">ลูก เจน + หลัน</div>
-    <div class="children-row">
-      <div class="card card-blue"><div class="name-th">โจ้</div></div>
-      <div class="card card-blue"><div class="name-th">โต้ง</div></div>
-      <div class="card card-blue"><div class="name-th">ณัฐ</div></div>
-      <div class="card card-pink"><div class="name-th">หมิว</div></div>
-    </div>
-  </div>
+      container.innerHTML = data.cards.map((c, i) =>
+        `<div class="card card-${data.gender[i]}" style="text-align:center; min-width:80px;">
+          <div class="name-th">${c}</div>
+        </div>`
+      ).join('');
 
-  <!-- ก๊า: 2 คน -->
-  <div class="gen16-family">
-    <div class="parent-label">ลูก ก๊า</div>
-    <div class="children-row">
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-    </div>
-  </div>
-
-  <!-- เสียง: 2 คน -->
-  <div class="gen16-family">
-    <div class="parent-label">ลูก เสียง</div>
-    <div class="children-row">
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-    </div>
-  </div>
-
-  <!-- ชัยยา: 2 คน -->
-  <div class="gen16-family">
-    <div class="parent-label">ลูก ชัยยา</div>
-    <div class="children-row">
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-    </div>
-  </div>
-
-  <!-- สมทรง: 5 คน -->
-  <div class="gen16-family">
-    <div class="parent-label">ลูก สมทรง</div>
-    <div class="children-row">
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-      <div class="card card-gray"><div class="name-th">?</div></div>
-    </div>
-  </div>
+      document.getElementById('gen16-section').style.display = 'block';
+      document.getElementById('arrow16').style.display = 'block';
+    }
+  </script>
 
   <!-- Legend -->
   <div class="legend">
