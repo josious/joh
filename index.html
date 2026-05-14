@@ -596,8 +596,52 @@
 
 </div>
 
+<style>
+  .print-btn {
+    display: flex;
+    justify-content: center;
+    margin: 32px 0 8px;
+  }
+  .print-btn button {
+    background: linear-gradient(135deg, #667EEA, #9B7BF4);
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 24px;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(102,126,234,0.4);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .print-btn button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102,126,234,0.5);
+  }
+  @media print {
+    .print-btn, .gen15-selector, #arrow16, #arrow17 { display: none !important; }
+    #gen16-section, #gen17-section { display: block !important; }
+    header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .card { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .gen-badge { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+
+<div class="print-btn">
+  <button onclick="window.print()">🖨️ พิมพ์ / บันทึก PDF</button>
+</div>
+
 <footer>
   johthiti@hotmail.com
+  <span style="margin: 0 10px; opacity:0.4;">·</span>
+  <span id="updated-date"></span>
+  <script>
+    const d = new Date();
+    const months = ['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+    document.getElementById('updated-date').textContent =
+      'อัปเดตล่าสุด ' + d.getDate() + ' ' + months[d.getMonth()] + ' ' + (d.getFullYear() + 543);
+  </script>
 </footer>
 
 </body>
