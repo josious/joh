@@ -3,23 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>丰俊公房世馨公之德英公世系 · แผนภูมิวงศ์ตระกูล</title>
+<title>สาแหรกตระกูล เจิมจุติธรรม</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&family=Sarabun:wght@300;400;500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap');
 
   :root {
-    --amber-50: #FAEEDA; --amber-400: #BA7517; --amber-800: #633806;
-    --teal-50: #E1F5EE; --teal-400: #1D9E75; --teal-800: #085041;
-    --coral-50: #FAECE7; --coral-400: #993C1D; --coral-800: #4A1B0C;
-    --purple-50: #EEEDFE; --purple-400: #534AB7; --purple-800: #3C3489;
-    --gray-50: #F1EFE8; --gray-400: #888780; --gray-800: #2C2C2A;
-    --blue-50: #E6F1FB; --blue-400: #185FA5; --blue-800: #0C447C;
-    --pink-50: #FBEAF0; --pink-400: #993556; --pink-800: #72243E;
-    --green-50: #EAF3DE; --green-400: #3B6D11; --green-800: #173404;
-    --bg: #faf9f6;
-    --text: #1a1916;
-    --text-muted: #6b6960;
-    --border: rgba(0,0,0,0.12);
+    --amber-50: #FFF8EC; --amber-400: #F5A623; --amber-800: #7A4F00;
+    --teal-50: #E6FAF5; --teal-400: #2DBFA0; --teal-800: #0D5C4A;
+    --coral-50: #FFF0EE; --coral-400: #FF7B6B; --coral-800: #7A2A20;
+    --purple-50: #F3EFFE; --purple-400: #9B7BF4; --purple-800: #3D2080;
+    --gray-50: #F4F6F8; --gray-400: #9AABB8; --gray-800: #3A4A55;
+    --blue-50: #EAF4FF; --blue-400: #4A9EE8; --blue-800: #1A4A7A;
+    --pink-50: #FFF0F6; --pink-400: #F472B6; --pink-800: #7A2050;
+    --bg: #F7F9FC;
+    --text: #1E2A35;
+    --text-muted: #6B7E8A;
+    --border: rgba(0,0,0,0.08);
+    --shadow: 0 2px 8px rgba(0,0,0,0.06);
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -27,41 +27,31 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'Sarabun', sans-serif;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
     font-size: 15px;
     line-height: 1.6;
     min-height: 100vh;
   }
 
   header {
-    background: #1a1814;
-    color: #f0ead8;
+    background: linear-gradient(135deg, #667EEA 0%, #9B7BF4 60%, #C4A0E8 100%);
+    color: #fff;
     text-align: center;
-    padding: 40px 20px 32px;
-    border-bottom: 3px solid var(--amber-400);
+    padding: 48px 20px 40px;
   }
 
   header .zh-title {
-    font-family: 'Noto Serif TC', serif;
-    font-size: clamp(20px, 4vw, 32px);
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: #f0ead8;
-    margin-bottom: 8px;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    font-size: clamp(24px, 5vw, 38px);
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 0;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.15);
   }
 
-  header .th-title {
-    font-size: 14px;
-    color: #a89f88;
-    letter-spacing: 1px;
-  }
-
-  header .origin {
-    margin-top: 12px;
-    font-size: 13px;
-    color: var(--amber-400);
-    letter-spacing: 0.5px;
-  }
+  header .th-title { display: none; }
+  header .origin { display: none; }
 
   .container {
     max-width: 960px;
@@ -77,19 +67,21 @@
   }
 
   .section-label .gen-badge {
-    background: #1a1814;
-    color: #f0ead8;
-    font-family: 'Noto Serif TC', serif;
+    background: linear-gradient(135deg, #667EEA, #9B7BF4);
+    color: #fff;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
     font-size: 12px;
-    padding: 4px 12px;
+    font-weight: 500;
+    padding: 5px 14px;
     border-radius: 20px;
     white-space: nowrap;
+    box-shadow: var(--shadow);
   }
 
   .section-label .gen-line {
     flex: 1;
     height: 1px;
-    background: var(--border);
+    background: linear-gradient(to right, #C4B5FD, transparent);
   }
 
   .connector-down {
@@ -103,26 +95,33 @@
     display: block;
     width: 2px;
     height: 28px;
-    background: var(--amber-400);
+    background: linear-gradient(to bottom, #9B7BF4, #F472B6);
   }
 
   /* Cards */
   .card {
-    border-radius: 10px;
+    border-radius: 14px;
     padding: 14px 18px;
-    border: 1px solid transparent;
+    border: 1.5px solid transparent;
+    box-shadow: var(--shadow);
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.10);
   }
 
   .card .name-zh {
-    font-family: 'Noto Serif TC', serif;
+    font-family: 'Noto Sans TC', sans-serif;
     font-size: 18px;
     font-weight: 700;
   }
 
   .card .name-reading {
-    font-size: 12px;
+    font-size: 11px;
     margin-top: 3px;
-    opacity: 0.75;
+    opacity: 0.65;
   }
 
   .card .name-th {
@@ -140,25 +139,25 @@
     font-weight: 500;
   }
 
-  /* Color variants */
-  .card-amber { background: var(--amber-50); border-color: var(--amber-400); color: var(--amber-800); }
+  /* Color variants — pastel */
+  .card-amber { background: var(--amber-50); border-color: #FDDFA0; color: var(--amber-800); }
   .card-amber .role-badge { background: var(--amber-400); color: #fff; }
 
-  .card-teal { background: var(--teal-50); border-color: var(--teal-400); color: var(--teal-800); }
+  .card-teal { background: var(--teal-50); border-color: #A7EDD9; color: var(--teal-800); }
   .card-teal .role-badge { background: var(--teal-400); color: #fff; }
 
-  .card-coral { background: var(--coral-50); border-color: var(--coral-400); color: var(--coral-800); }
+  .card-coral { background: var(--coral-50); border-color: #FFBDB6; color: var(--coral-800); }
   .card-coral .role-badge { background: var(--coral-400); color: #fff; }
 
-  .card-purple { background: var(--purple-50); border-color: var(--purple-400); color: var(--purple-800); }
+  .card-purple { background: var(--purple-50); border-color: #D4BBFC; color: var(--purple-800); }
   .card-purple .role-badge { background: var(--purple-400); color: #fff; }
 
-  .card-gray { background: var(--gray-50); border-color: var(--gray-400); color: var(--gray-800); }
+  .card-gray { background: var(--gray-50); border-color: #D8E3EA; color: var(--gray-800); }
 
-  .card-blue { background: var(--blue-50); border-color: var(--blue-400); color: var(--blue-800); }
+  .card-blue { background: var(--blue-50); border-color: #B3D7F8; color: var(--blue-800); }
   .card-blue .role-badge { background: var(--blue-400); color: #fff; }
 
-  .card-pink { background: var(--pink-50); border-color: var(--pink-400); color: var(--pink-800); }
+  .card-pink { background: var(--pink-50); border-color: #F9C0DC; color: var(--pink-800); }
   .card-pink .role-badge { background: var(--pink-400); color: #fff; }
 
   .card-blue-dashed { background: var(--blue-50); border: 2px dashed var(--blue-400); color: var(--blue-800); }
@@ -211,7 +210,6 @@
     display: block;
     width: 24px;
     height: 1px;
-    background: var(--gray-400);
     border-top: 1px dashed var(--gray-400);
   }
 
@@ -247,6 +245,25 @@
     padding: 12px 14px;
   }
 
+  .gen16-family { margin-bottom: 20px; }
+  .gen16-family .parent-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    padding-left: 4px;
+    font-weight: 500;
+  }
+  .gen16-family .children-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .gen16-family .children-row .card {
+    min-width: 70px;
+    text-align: center;
+    padding: 10px 8px;
+  }
+
   /* Legend */
   .legend {
     display: flex;
@@ -255,8 +272,9 @@
     margin-top: 40px;
     padding: 16px 20px;
     background: white;
-    border-radius: 10px;
+    border-radius: 14px;
     border: 1px solid var(--border);
+    box-shadow: var(--shadow);
   }
 
   .legend-item {
@@ -270,24 +288,25 @@
   .legend-dot {
     width: 14px;
     height: 14px;
-    border-radius: 3px;
+    border-radius: 4px;
     flex-shrink: 0;
   }
 
   .note-box {
-    background: white;
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--amber-400);
-    border-radius: 6px;
+    background: #FAFBFF;
+    border: 1px solid #E0E7FF;
+    border-left: 4px solid #9B7BF4;
+    border-radius: 10px;
     padding: 12px 16px;
     margin-top: 12px;
     font-size: 13px;
     color: var(--text-muted);
+    box-shadow: var(--shadow);
   }
 
   .arrow-down {
     text-align: center;
-    color: var(--amber-400);
+    color: #9B7BF4;
     font-size: 20px;
     padding: 4px 0;
     line-height: 1;
@@ -305,17 +324,44 @@
 <body>
 
 <header>
-  <div class="zh-title">丰俊公房世馨公之德英公世系</div>
-  <div class="th-title">แผนภูมิวงศ์ตระกูล · สายสกุลเต๋ออิงกง</div>
-  <div class="origin">丰顺县 มณฑลกวางตุ้ง · สำเนียงแคะ (客家 Hakka)</div>
+  <div class="zh-title">สาแหรกตระกูล เจิมจุติธรรม</div>
 </header>
 
 <div class="container">
+
+  <!-- ก่อนรุ่น 12 -->
+  <div class="section-label">
+    <span class="gen-badge">ต้นตระกูล · ก่อนรุ่นที่ 12</span>
+    <div class="gen-line"></div>
+  </div>
+  <div class="siblings-row">
+    <div class="card card-gray" style="text-align:center;">
+      <div class="name-zh">丰俊公</div>
+      <div class="name-reading">Fung Jun Gung · ฟุงจุ้นกุง</div>
+      <div style="font-size:11px;margin-top:4px;opacity:0.6;">ต้นตระกูลใหญ่</div>
+    </div>
+    <div style="display:flex;align-items:center;color:#888;font-size:20px;">→</div>
+    <div class="card card-gray" style="text-align:center;">
+      <div class="name-zh">世馨公</div>
+      <div class="name-reading">Si Hin Gung · ซีฮิ้นกุง</div>
+      <div style="font-size:11px;margin-top:4px;opacity:0.6;">รุ่นก่อน 德英公</div>
+    </div>
+  </div>
+  <div class="note-box" style="margin-top:8px;margin-bottom:4px;">
+    <span style="font-size:12px;opacity:0.7;">⚠ ไม่สามารถระบุลำดับรุ่นที่แน่นอนได้ · อ้างอิงจากชื่อแผนภูมิ 丰俊公房世馨公之德英公世系</span>
+  </div>
+
+  <div class="arrow-down">↓</div>
 
   <!-- รุ่น 12 -->
   <div class="section-label">
     <span class="gen-badge">รุ่นที่ 12 · 十二世 · 德</span>
     <div class="gen-line"></div>
+  </div>
+  <div class="note-box" style="margin-bottom:12px;">
+    📍 丰顺县 揭阳市 广东省<br>
+    อำเภอเฝิงซุ่น (ฟุง ซุน) · เมืองเจี๊ยะหยาง (เกี๊ยด ยง) · มณฑลกวางตุ้ง (กวง ตุง)<br>
+    <span style="font-size:12px;opacity:0.7;">(การปกครองในสมัยนั้น)</span>
   </div>
   <div class="row-center">
     <div class="card card-amber">
@@ -330,6 +376,11 @@
   <div class="section-label">
     <span class="gen-badge">รุ่นที่ 13 · 十三世 · 岐</span>
     <div class="gen-line"></div>
+  </div>
+  <div class="note-box" style="margin-bottom:12px;">
+    📍 丰顺县 揭阳市 广东省<br>
+    อำเภอเฝิงซุ่น (ฟุง ซุน) · เมืองเจี๊ยะหยาง (เกี๊ยด ยง) · มณฑลกวางตุ้ง (กวง ตุง)<br>
+    <span style="font-size:12px;opacity:0.7;">(การปกครองในสมัยนั้น)</span>
   </div>
   <div class="siblings-row">
     <div class="card card-gray"><div class="name-zh">岐景公</div></div>
@@ -351,6 +402,9 @@
     <span class="gen-badge">รุ่นที่ 14 · 十四世 · 凤</span>
     <div class="gen-line"></div>
   </div>
+  <div class="note-box" style="margin-bottom:12px;">
+    📍 บ้านห้วยกระบอก อำเภอบ้านโป่ง จังหวัดราชบุรี
+  </div>
   <div class="siblings-row">
     <div class="card card-purple">
       <div class="name-zh">鳳泰公 / 劲好公</div>
@@ -370,54 +424,170 @@
     <div class="gen-line"></div>
   </div>
   <div class="gen15-grid">
-    <div class="card card-gray"><div class="name-th">ลูก 1</div></div>
-    <div class="card card-gray"><div class="name-th">ลูก 2</div></div>
-    <div class="card card-gray"><div class="name-th">ลูก 3</div></div>
-    <div class="card card-gray"><div class="name-th">ลูก 4</div></div>
-    <div class="card card-gray"><div class="name-th">ลูก 5</div></div>
-    <div class="card card-gray"><div class="name-th">ลูก 6</div></div>
-    <div class="card card-gray"><div class="name-th">ลูก 7</div></div>
+    <div class="card card-blue"><div class="name-th">สุมิตร</div></div>
+    <div class="card card-blue"><div class="name-th">ก้อง</div></div>
+    <div class="card card-blue"><div class="name-th">ยุทธ</div></div>
+    <div class="card card-pink"><div class="name-th">แสงสุรีย์</div></div>
+    <div class="card card-blue"><div class="name-th">ถนัด</div></div>
+    <div class="card card-pink"><div class="name-th">เสี่ยมถอ</div></div>
+    <div class="card card-blue"><div class="name-th">เกียรติ</div></div>
     <div class="card card-blue highlighted">
       <div class="name-th">เจน</div>
     </div>
-    <div class="card card-gray"><div class="name-th">ลูก 9</div></div>
-    <div class="card card-gray"><div class="name-th">ลูก 10</div></div>
-    <div class="card card-gray"><div class="name-th">ลูก 11</div></div>
-    <div class="card card-blue-dashed"><div class="name-th">บุญธรรม</div></div>
+    <div class="card card-blue"><div class="name-th">ก๊า</div></div>
+    <div class="card card-blue"><div class="name-th">เสียง</div></div>
+    <div class="card card-blue"><div class="name-th">ชัยยา</div></div>
+    <div class="card card-pink"><div class="name-th">สมทรง</div></div>
   </div>
 
-  <!-- คู่สมรสเจน -->
-  <div style="margin-top: 16px;">
-    <div class="pair-row">
-      <div class="card card-blue" style="min-width:120px; text-align:center;">
-        <div class="name-th">เจน</div>
-      </div>
-      <div class="marriage-line">แต่งงาน</div>
-      <div class="card card-pink" style="min-width:120px; text-align:center;">
-        <div class="name-th">หลัน</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="arrow-down">↓</div>
+<div class="arrow-down">↓</div>
 
   <!-- รุ่น 16 -->
   <div class="section-label">
     <span class="gen-badge">รุ่นที่ 16 · 十六世 · 鸣</span>
     <div class="gen-line"></div>
   </div>
-  <div class="gen16-row">
-    <div class="card card-blue">
-      <div class="name-th">โจ้</div>
+
+  <style>
+    .gen16-family { margin-bottom: 20px; }
+    .gen16-family .parent-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      padding-left: 4px;
+    }
+    .gen16-family .children-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .gen16-family .children-row .card {
+      min-width: 70px;
+      text-align: center;
+      padding: 10px 8px;
+    }
+  </style>
+
+  <!-- สุมิตร: 3 คน -->
+  <div class="gen16-family">
+    <div class="parent-label">ลูก สุมิตร</div>
+    <div class="children-row">
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
     </div>
-    <div class="card card-blue">
-      <div class="name-th">โต้ง</div>
+  </div>
+
+  <!-- ก้อง: 3 คน -->
+  <div class="gen16-family">
+    <div class="parent-label">ลูก ก้อง</div>
+    <div class="children-row">
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
     </div>
-    <div class="card card-blue">
-      <div class="name-th">ณัฐ</div>
+  </div>
+
+  <!-- ยุทธ: 3 คน -->
+  <div class="gen16-family">
+    <div class="parent-label">ลูก ยุทธ</div>
+    <div class="children-row">
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
     </div>
-    <div class="card card-pink">
-      <div class="name-th">หมิว</div>
+  </div>
+
+  <!-- แสงสุรีย์: 6 คน -->
+  <div class="gen16-family">
+    <div class="parent-label">ลูก แสงสุรีย์</div>
+    <div class="children-row">
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+    </div>
+  </div>
+
+  <!-- ถนัด: 3 คน -->
+  <div class="gen16-family">
+    <div class="parent-label">ลูก ถนัด</div>
+    <div class="children-row">
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+    </div>
+  </div>
+
+  <!-- เสี่ยมถอ: 3 คน -->
+  <div class="gen16-family">
+    <div class="parent-label">ลูก เสี่ยมถอ</div>
+    <div class="children-row">
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+    </div>
+  </div>
+
+  <!-- เกียรติ: 3 คน -->
+  <div class="gen16-family">
+    <div class="parent-label">ลูก เกียรติ</div>
+    <div class="children-row">
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+    </div>
+  </div>
+
+  <!-- เจน: 4 คน -->
+  <div class="gen16-family">
+    <div class="parent-label">ลูก เจน + หลัน</div>
+    <div class="children-row">
+      <div class="card card-blue"><div class="name-th">โจ้</div></div>
+      <div class="card card-blue"><div class="name-th">โต้ง</div></div>
+      <div class="card card-blue"><div class="name-th">ณัฐ</div></div>
+      <div class="card card-pink"><div class="name-th">หมิว</div></div>
+    </div>
+  </div>
+
+  <!-- ก๊า: 2 คน -->
+  <div class="gen16-family">
+    <div class="parent-label">ลูก ก๊า</div>
+    <div class="children-row">
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+    </div>
+  </div>
+
+  <!-- เสียง: 2 คน -->
+  <div class="gen16-family">
+    <div class="parent-label">ลูก เสียง</div>
+    <div class="children-row">
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+    </div>
+  </div>
+
+  <!-- ชัยยา: 2 คน -->
+  <div class="gen16-family">
+    <div class="parent-label">ลูก ชัยยา</div>
+    <div class="children-row">
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+    </div>
+  </div>
+
+  <!-- สมทรง: 5 คน -->
+  <div class="gen16-family">
+    <div class="parent-label">ลูก สมทรง</div>
+    <div class="children-row">
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
+      <div class="card card-gray"><div class="name-th">?</div></div>
     </div>
   </div>
 
@@ -429,11 +599,10 @@
     <div class="legend-item"><div class="legend-dot" style="background:var(--blue-400)"></div>ชาย</div>
     <div class="legend-item"><div class="legend-dot" style="background:var(--pink-400)"></div>หญิง</div>
     <div class="legend-item"><div class="legend-dot" style="background:var(--gray-400)"></div>รอใส่ชื่อ</div>
-    <div class="legend-item"><div class="legend-dot" style="background:var(--blue-50); border:2px dashed var(--blue-400)"></div>ลูกบุญธรรม</div>
   </div>
 
   <div class="note-box">
-    หมายเหตุ: ลูกรุ่น 15 คนที่ 1–7, 9–11 และบุญธรรม ยังรอใส่ชื่อ · ข้อมูลจากแผนภูมิ 丰俊公房世馨公之德英公世系
+    ข้อมูลจากแผนภูมิ 丰俊公房世馨公之德英公世系
   </div>
 
 </div>
