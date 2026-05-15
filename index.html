@@ -312,6 +312,56 @@
     line-height: 1;
   }
 
+  .gen14-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  .gen14-card {
+    border-radius: 14px;
+    padding: 14px 18px;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.15s, box-shadow 0.15s;
+    min-width: 160px;
+  }
+  .gen14-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.10); }
+  .gen14-card.blue { background: var(--blue-50); border-color: #B3D7F8; color: var(--blue-800); }
+  .gen14-card.pink { background: var(--pink-50); border-color: #F9C0DC; color: var(--pink-800); }
+  .gen14-card.gray { background: var(--gray-50); border-color: #D8E3EA; color: var(--gray-800); }
+  .gen14-card.active.blue { background: var(--blue-400); color: #fff; border-color: var(--blue-400); }
+  .gen14-card.active.pink { background: var(--pink-400); color: #fff; border-color: var(--pink-400); }
+  .gen14-card.active.gray { background: var(--gray-400); color: #fff; border-color: var(--gray-400); }
+
+  .gen15-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+  .gen15-btn {
+    padding: 10px 16px;
+    border-radius: 14px;
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.2s;
+    box-shadow: var(--shadow);
+  }
+  .gen15-btn.male { background: var(--blue-50); border-color: #B3D7F8; color: var(--blue-800); }
+  .gen15-btn.female { background: var(--pink-50); border-color: #F9C0DC; color: var(--pink-800); }
+  .gen15-btn.gray { background: var(--gray-50); border-color: #D8E3EA; color: var(--gray-800); }
+  .gen15-btn.active.male { background: var(--blue-400); color: #fff; border-color: var(--blue-400); }
+  .gen15-btn.active.female { background: var(--pink-400); color: #fff; border-color: var(--pink-400); }
+  .gen15-btn.active.gray { background: var(--gray-400); color: #fff; border-color: var(--gray-400); }
+  .gen15-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.10); }
+
   footer {
     text-align: center;
     padding: 24px;
@@ -383,105 +433,59 @@
     <span style="font-size:12px;opacity:0.7;">(การปกครองในสมัยนั้น)</span>
   </div>
   <div class="siblings-row">
-    <div class="card card-gray"><div class="name-zh">岐景公</div></div>
-    <div class="card card-gray"><div class="name-zh">岐亮公</div></div>
-    <div class="card card-teal" style="border-width:2px;">
+    <div class="card card-teal" style="cursor:pointer;" onclick="showGen14('岐景公', this)"><div class="name-zh">岐景公</div></div>
+    <div class="card card-teal" style="cursor:pointer;" onclick="showGen14('岐亮公', this)"><div class="name-zh">岐亮公</div></div>
+    <div class="card card-teal" style="border-width:2px; cursor:pointer;" onclick="showGen14('岐奕公', this)">
       <div class="name-zh">岐奕公</div>
       <div class="name-reading">Qí Yì Gōng · Ki Yak Gung</div>
       <div class="name-reading">ซั้มยิด เซี่ยงอึ๋ง</div>
     </div>
-    <div class="card card-gray"><div class="name-zh">岐宗公</div></div>
-    <div class="card card-gray"><div class="name-zh">岐应公</div></div>
-    <div class="card card-gray"><div class="name-zh">岐丰公</div></div>
-    <div class="card card-gray"><div class="name-zh">全裕公</div></div>
+    <div class="card card-teal" style="cursor:pointer;" onclick="showGen14('岐宗公', this)"><div class="name-zh">岐宗公</div></div>
+    <div class="card card-teal" style="cursor:pointer;" onclick="showGen14('岐应公', this)"><div class="name-zh">岐应公</div></div>
+    <div class="card card-teal" style="cursor:pointer;" onclick="showGen14('岐丰公', this)"><div class="name-zh">岐丰公</div></div>
+    <div class="card card-teal" style="cursor:pointer;" onclick="showGen14('全裕公', this)"><div class="name-zh">全裕公</div></div>
   </div>
 
-  <div class="arrow-down">↓</div>
+  <div class="arrow-down" id="arrow14" style="display:none;">↓</div>
+
+  <div id="gen14-nodata" style="display:none; text-align:center; padding:16px; color:var(--text-muted); font-size:13px; background:white; border-radius:14px; border:1px solid var(--border); box-shadow:var(--shadow);">
+    ยังไม่มีข้อมูลสายของ <span style="font-family:'Noto Sans TC',sans-serif; font-weight:500;"></span>
+  </div>
 
   <!-- รุ่น 14 -->
+  <div id="gen14-section" style="display:none;">
   <div class="section-label">
     <span class="gen-badge">รุ่นที่ 14 · 十四世 · 凤 · หงส์, มงคล</span>
     <div class="gen-line"></div>
   </div>
-  <div class="note-box" style="margin-bottom:12px;">
-    📍 บ้านห้วยกระบอก อำเภอบ้านโป่ง จังหวัดราชบุรี
-  </div>
-  <div class="siblings-row">
-    <div class="card card-blue">
-      <div class="name-zh">鳳泰公 / 劲好公</div>
-      <div class="name-reading">Fèng Tài / Jìn Hǎo · Fung Thai / Jin Ho</div>
-      <div class="name-reading">เคี่ยงฮ้อ เซี่ยงอึ๋ง</div>
+  <div class="gen14-selector" id="gen14-selector-content">
+    <div class="gen14-card blue" onclick="showGen15('เคี่ยงฮ้อ', this)">
+      <div class="name-zh" style="font-family:'Noto Sans TC',sans-serif; font-size:16px; font-weight:700;">鳳泰公 / 劲好公</div>
+      <div style="font-size:11px; margin-top:3px; opacity:0.7;">Fèng Tài / Jìn Hǎo · Fung Thai / Jin Ho</div>
+      <div style="font-size:11px; opacity:0.7;">เคี่ยงฮ้อ เซี่ยงอึ๋ง</div>
     </div>
-    <div class="card card-pink">
-      <div class="name-zh">อากู๊</div>
-      <div class="name-reading">เจือเนี้ย เซี่ยงกี้ · อากู๊</div>
+    <div class="gen14-card pink" onclick="showGen15('อากู๊', this)">
+      <div class="name-zh" style="font-family:'Noto Sans TC',sans-serif; font-size:16px; font-weight:700;">อากู๊</div>
+      <div style="font-size:11px; margin-top:3px; opacity:0.7;">เจือเนี้ย เซี่ยงกี้ · อากู๊</div>
     </div>
-    <div class="card card-blue" style="border-width:2px;">
-      <div class="name-zh">鳳廷公 / 足好公</div>
-      <div class="name-reading">Fèng Tíng / Zú Hǎo · Fung Ten / Juk Ho</div>
-      <div class="name-reading">จุกฮ้อ เซี่ยงอึ๋ง · หยุง เซี่ยงหว่อง</div>
+    <div class="gen14-card blue" style="border-width:2px;" onclick="showGen15('จุกฮ้อ', this)">
+      <div class="name-zh" style="font-family:'Noto Sans TC',sans-serif; font-size:16px; font-weight:700;">鳳廷公 / 足好公</div>
+      <div style="font-size:11px; margin-top:3px; opacity:0.7;">Fèng Tíng / Zú Hǎo · Fung Ten / Juk Ho</div>
+      <div style="font-size:11px; opacity:0.7;">จุกฮ้อ เซี่ยงอึ๋ง · หยุง เซี่ยงหว่อง</div>
     </div>
   </div>
 
-  <div class="arrow-down">↓</div>
+  </div> <!-- end gen14-section -->
+
+  <div class="arrow-down" id="arrow15" style="display:none;">↓</div>
 
   <!-- รุ่น 15 -->
-  <div class="section-label">
-    <span class="gen-badge">รุ่นที่ 15 · 十五世 · 永 · นิรันดร์</span>
-    <div class="gen-line"></div>
-  </div>
-
-  <style>
-    .gen15-selector {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: center;
-    }
-    .gen15-btn {
-      padding: 10px 16px;
-      border-radius: 14px;
-      border: 1.5px solid transparent;
-      cursor: pointer;
-      font-family: 'IBM Plex Sans Thai', sans-serif;
-      font-size: 15px;
-      font-weight: 500;
-      transition: all 0.2s;
-      box-shadow: var(--shadow);
-    }
-    .gen15-btn.male { background: var(--blue-50); border-color: #B3D7F8; color: var(--blue-800); }
-    .gen15-btn.female { background: var(--pink-50); border-color: #F9C0DC; color: var(--pink-800); }
-    .gen15-btn.active.male { background: var(--blue-400); color: #fff; border-color: var(--blue-400); }
-    .gen15-btn.active.female { background: var(--pink-400); color: #fff; border-color: var(--pink-400); }
-    .gen15-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.10); }
-  </style>
-
-  <div class="gen15-selector">
-    <div style="width:100%; font-size:12px; color:var(--text-muted); margin-bottom:6px; padding-left:4px;">เคี่ยงฮ้อ (鳳泰公)</div>
-    <button class="gen15-btn male"     onclick="showGen16('ฝ14_1_1', this)">ลูก 1</button>
-    <button class="gen15-btn female"   onclick="showGen16('ฝ14_1_2', this)">ลูก 2</button>
-    <button class="gen15-btn male"     onclick="showGen16('ฝ14_1_3', this)">ลูก 3</button>
-
-    <div style="width:100%; font-size:12px; color:var(--text-muted); margin:10px 0 6px; padding-left:4px;">เจือเนี้ย เซี่ยงกี้ · อากู๊</div>
-    <button class="gen15-btn male"     onclick="showGen16('ประเสริฐ_14_2', this)">ประเสริฐ</button>
-    <button class="gen15-btn male"     onclick="showGen16('ประวัติ_14_2',  this)">ประวัติ</button>
-    <button class="gen15-btn male"     onclick="showGen16('ฝ14_2_3', this)">ลูก 3</button>
-    <button class="gen15-btn male"     onclick="showGen16('ฝ14_2_4', this)">ลูก 4</button>
-    <button class="gen15-btn female"   onclick="showGen16('ฝ14_2_5', this)">ลูก 5</button>
-
-    <div style="width:100%; font-size:12px; color:var(--text-muted); margin:10px 0 6px; padding-left:4px;">จุกฮ้อ (鳳廷公) · หยุง เซี่ยงหว่อง</div>
-    <button class="gen15-btn male"     onclick="showGen16('สุมิตร',      this)">สุมิตร</button>
-    <button class="gen15-btn male"     onclick="showGen16('นิพนธ์',      this)">นิพนธ์ (ก้อง)</button>
-    <button class="gen15-btn male"     onclick="showGen16('ยุทธ',        this)">ยุทธ</button>
-    <button class="gen15-btn female"   onclick="showGen16('แสงสุรีย์',   this)">แสงสุรีย์</button>
-    <button class="gen15-btn male"     onclick="showGen16('ถนัด',        this)">ถนัด</button>
-    <button class="gen15-btn female"   onclick="showGen16('เสี่ยมถอ',   this)">แสงศิริ (เสี่ยมถอ)</button>
-    <button class="gen15-btn male"     onclick="showGen16('เกียรติ',     this)">เกียรติ</button>
-    <button class="gen15-btn male"     onclick="showGen16('เจน',         this)">เจน · 吳永增</button>
-    <button class="gen15-btn male"     onclick="showGen16('บุญชัย',      this)">บุญชัย (ก๊า)</button>
-    <button class="gen15-btn male"     onclick="showGen16('บุญมา',       this)">บุญมา</button>
-    <button class="gen15-btn male"     onclick="showGen16('ชัยยา',       this)">ชัยยา · 吳永龍</button>
-    <button class="gen15-btn female"   onclick="showGen16('สมทรง',      this)">สมทรง</button>
+  <div id="gen15-section" style="display:none;">
+    <div class="section-label">
+      <span class="gen-badge">รุ่นที่ 15 · 十五世 · 永 · นิรันดร์</span>
+      <div class="gen-line"></div>
+    </div>
+    <div id="gen15-buttons" class="gen15-selector"></div>
   </div>
 
   <div class="arrow-down" id="arrow16" style="display:none;">↓</div>
@@ -510,20 +514,202 @@
   </div>
 
   <script>
+    let activeGen13Card = null;
+    let activeGen14Card = null;
+    let activeGen15Btn = null;
+
+    const gen14HasData = ['岐奕公', '岐亮公'];
+
+    function showGen14(name, card) {
+      if (activeGen13Card) {
+        activeGen13Card.style.filter = '';
+        activeGen13Card.style.background = '';
+        activeGen13Card.style.color = '';
+        activeGen13Card.style.borderColor = '';
+        activeGen13Card.style.boxShadow = '';
+      }
+      card.style.filter = '';
+      card.style.background = '#2DBFA0';
+      card.style.color = '#fff';
+      card.style.borderColor = '#2DBFA0';
+      activeGen13Card = card;
+
+      const section = document.getElementById('gen14-section');
+      const noData = document.getElementById('gen14-nodata');
+      const selector = document.getElementById('gen14-selector-content');
+
+      if (gen14HasData.includes(name)) {
+        section.style.display = 'block';
+        if (noData) noData.style.display = 'none';
+        if (selector && gen14Cards[name]) selector.innerHTML = gen14Cards[name];
+      } else {
+        section.style.display = 'none';
+        if (noData) {
+          noData.style.display = 'block';
+          noData.querySelector('span').textContent = name;
+        }
+      }
+
+      document.getElementById('arrow14').style.display = 'block';
+      document.getElementById('gen15-section').style.display = 'none';
+      document.getElementById('arrow15').style.display = 'none';
+      document.getElementById('gen16-section').style.display = 'none';
+      document.getElementById('arrow16').style.display = 'none';
+      document.getElementById('gen17-section').style.display = 'none';
+      document.getElementById('arrow17').style.display = 'none';
+      activeGen14Card = null;
+      activeGen15Btn = null;
+    }
+
+    const gen14Cards = {
+      '岐奕公': `
+        <div class="gen14-card blue" onclick="showGen15('เคี่ยงฮ้อ', this)">
+          <div class="name-zh" style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:700;">鳳泰公 / 劲好公</div>
+          <div style="font-size:11px;margin-top:3px;opacity:0.7;">เคี่ยงฮ้อ เซี่ยงอึ๋ง</div>
+        </div>
+        <div class="gen14-card pink" onclick="showGen15('อากู๊', this)">
+          <div class="name-zh" style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:700;">อากู๊</div>
+          <div style="font-size:11px;margin-top:3px;opacity:0.7;">เจือเนี้ย เซี่ยงกี้ · อากู๊</div>
+        </div>
+        <div class="gen14-card blue" style="border-width:2px;" onclick="showGen15('จุกฮ้อ', this)">
+          <div class="name-zh" style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:700;">鳳廷公 / 足好公</div>
+          <div style="font-size:11px;margin-top:3px;opacity:0.7;">จุกฮ้อ เซี่ยงอึ๋ง · หยุง เซี่ยงหว่อง</div>
+        </div>`,
+      '岐亮公': `
+        <div class="gen14-card gray" onclick="showGen15('凤辉公', this)">
+          <div class="name-zh" style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:700;">凤辉公</div>
+          <div style="font-size:11px;margin-top:3px;opacity:0.7;">เฟิงฮุ่ยกง</div>
+        </div>
+        <div class="gen14-card gray" onclick="showGen15('凤泰公', this)">
+          <div class="name-zh" style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:700;">凤泰公</div>
+          <div style="font-size:11px;margin-top:3px;opacity:0.7;">เฟิงไท่กง</div>
+        </div>
+        <div class="gen14-card gray" style="cursor:default;">
+          <div class="name-zh" style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:700;">渐好公</div>
+          <div style="font-size:11px;margin-top:3px;opacity:0.7;">เจี้ยนห่าวกง</div>
+        </div>
+        <div class="gen14-card gray" onclick="showGen15('佑好公', this)">
+          <div class="name-zh" style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:700;">佑好公</div>
+          <div style="font-size:11px;margin-top:3px;opacity:0.7;">โย่วห่าวกง</div>
+        </div>
+        <div class="gen14-card gray" onclick="showGen15('随好公', this)">
+          <div class="name-zh" style="font-family:'Noto Sans TC',sans-serif;font-size:16px;font-weight:700;">随好公</div>
+          <div style="font-size:11px;margin-top:3px;opacity:0.7;">ซุยห่าวกง</div>
+        </div>`,
+    };
+
+    const gen15Data = {
+      'เคี่ยงฮ้อ': {
+        buttons: [
+          { key: 'ทรงฤทธิ์', label: 'ทรงฤทธิ์ ฤทธิ์บัณทิต · หยุ่นช้อง', gender: 'male' },
+          { key: 'หลี่ชุ้น', label: 'หลี่ชุ้น', gender: 'female' },
+          { key: 'จู๊', label: 'จู๊', gender: 'female' },
+        ]
+      },
+      'อากู๊': {
+        buttons: [
+          { key: 'ประวิทย์_14_2', label: 'ประวิทย์ เจิมจุติธรรม', gender: 'male' },
+          { key: 'ประวัติ_14_2',  label: 'ประวัติ เจิมจุติธรรม',  gender: 'male' },
+          { key: 'เรดค้วง_14_2', label: 'เรดค้วง', gender: 'female' },
+          { key: 'ฝ14_2_4', label: '?', gender: 'female' },
+          { key: 'ซุ้ยอึ๊ม_14_2', label: 'ซุ้ยอึ๊ม', gender: 'female' },
+        ]
+      },
+      'จุกฮ้อ': {
+        buttons: [
+          { key: 'สุมิตร',    label: 'สุมิตร',               gender: 'male' },
+          { key: 'นิพนธ์',    label: 'นิพนธ์ (ก้อง)',         gender: 'male' },
+          { key: 'ยุทธ',      label: 'ยุทธ',                  gender: 'male' },
+          { key: 'แสงสุรีย์', label: 'แสงสุรีย์',             gender: 'female' },
+          { key: 'ถนัด',      label: 'ถนัด',                  gender: 'male' },
+          { key: 'เสี่ยมถอ',  label: 'แสงศิริ (เสี่ยมถอ)',   gender: 'female' },
+          { key: 'เกียรติ',   label: 'เกียรติ',               gender: 'male' },
+          { key: 'เจน',       label: 'เจน · 吳永增',          gender: 'male' },
+          { key: 'บุญชัย',    label: 'บุญชัย (ก๊า)',          gender: 'male' },
+          { key: 'บุญมา',     label: 'บุญมา',                 gender: 'male' },
+          { key: 'ชัยยา',     label: 'ชัยยา · 吳永龍',        gender: 'male' },
+          { key: 'สมทรง',    label: 'สมทรง',                 gender: 'female' },
+        ]
+      },
+      '凤辉公': {
+        buttons: [
+          { key: '永常', label: '永常 (หย่งฉาง)', gender: 'gray' },
+          { key: '客喜', label: '客喜 (เค่อซี่)', gender: 'gray' },
+          { key: '客昌', label: '客昌 (เค่อชาง)', gender: 'gray' },
+          { key: '新中', label: '新中 (ซินจง)', gender: 'gray' },
+        ]
+      },
+      '凤泰公': {
+        buttons: [
+          { key: '南昌', label: '南昌 (หนานชาง)', gender: 'gray' },
+          { key: '永利_亮', label: '永利 (หย่งลี่)', gender: 'gray' },
+          { key: '南琪', label: '南琪 (หนานฉี)', gender: 'gray' },
+          { key: '南钰', label: '南钰 (หนานยฺวี่)', gender: 'gray' },
+        ]
+      },
+      '佑好公': {
+        buttons: [
+          { key: '潮昌', label: '潮昌 (เฉาชาง)', gender: 'gray' },
+        ]
+      },
+      '随好公': {
+        buttons: [
+          { key: '永才', label: '永才 (หย่งไฉ)', gender: 'gray' },
+          { key: '永台', label: '永台 (หย่งไถ)', gender: 'gray' },
+          { key: '永回', label: '永回 (หย่งฮุย)', gender: 'gray' },
+        ]
+      },
+    };
+
+    function showGen15(name, card) {
+      if (activeGen14Card) activeGen14Card.classList.remove('active');
+      card.classList.add('active');
+      activeGen14Card = card;
+
+      const data = gen15Data[name];
+      const container = document.getElementById('gen15-buttons');
+      container.innerHTML = data.buttons.map(b =>
+        `<button class="gen15-btn ${b.gender}" onclick="showGen16('${b.key}', this)">${b.label}</button>`
+      ).join('');
+
+      document.getElementById('gen15-section').style.display = 'block';
+      document.getElementById('arrow15').style.display = 'block';
+      document.getElementById('gen16-section').style.display = 'none';
+      document.getElementById('arrow16').style.display = 'none';
+      document.getElementById('gen17-section').style.display = 'none';
+      document.getElementById('arrow17').style.display = 'none';
+      activeGen15Btn = null;
+    }
+
     const gen16Data = {
+      // ลูกของ 凤辉公
+      '永常': { cards: ['?'], gender: ['gray'] },
+      '客喜': { cards: ['?'], gender: ['gray'] },
+      '客昌': { cards: ['?'], gender: ['gray'] },
+      '新中': { cards: ['?'], gender: ['gray'] },
+      // ลูกของ 凤泰公
+      '南昌': { cards: ['?'], gender: ['gray'] },
+      '永利_亮': { cards: ['?'], gender: ['gray'] },
+      '南琪': { cards: ['?'], gender: ['gray'] },
+      '南钰': { cards: ['?'], gender: ['gray'] },
+      // ลูกของ 佑好公
+      '潮昌': { cards: ['?'], gender: ['gray'] },
+      // ลูกของ 随好公
+      '永才': { cards: ['?'], gender: ['gray'] },
+      '永台': { cards: ['?'], gender: ['gray'] },
+      '永回': { cards: ['?'], gender: ['gray'] },
       // ลูกของ เคี่ยงฮ้อ (鳳泰公)
-      'ฝ14_1_1': { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
-      'ฝ14_1_2': { cards: ['?','?','?','?','?'], gender: ['gray','gray','gray','gray','gray'] },
-      'ฝ14_1_3': { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
-      // ลูกของ หญิงคนกลาง
-      'ประเสริฐ_14_2': { cards: ['?','?'], gender: ['blue','blue'] },
+      'ทรงฤทธิ์': { cards: ['หมินฝุก','?','หมวยเล็ก','สมบัติ ฤทธิ์บัณทิต','?','อ้อน','เยาวพา','สันติสุข'], gender: ['gray','gray','gray','gray','gray','gray','gray','gray'] },
+      'หลี่ชุ้น': { cards: ['?','?'], gender: ['gray','gray'] },
+      'จู๊':       { cards: ['?'], gender: ['gray'] },
+      // ลูกของ หญิงคนกลาง (อากู๊)
+      'ประวิทย์_14_2': { cards: ['?','?'], gender: ['gray','gray'] },
       'ประวัติ_14_2':  { cards: ['?'], gender: ['gray'] },
-      'ฝ14_2_3': { cards: ['?'], gender: ['gray'] },
-      'ฝ14_2_4': { cards: ['?'], gender: ['gray'] },
-      'ฝ14_2_5': { cards: ['?'], gender: ['pink'] },
+      'เรดค้วง_14_2':  { cards: [], gender: [] },
+      'ฝ14_2_4':       { cards: [], gender: [] },      'ซุ้ยอึ๊ม_14_2': { cards: ['?'], gender: ['gray'] },
       // ลูกของ จุกฮ้อ (鳳廷公)
       'สุมิตร':      { cards: ['ประจักษ์','ประเสริฐ','วริศรา','ปิยะ'], gender: ['gray','gray','gray','blue'], note: 'คู่สมรส: ศรีสุวรรณ' },
-      'นิพนธ์':      { cards: ['นิวัฒน์','โฆษิต','นก','ปู'], gender: ['blue','blue','blue','pink'], note: 'คู่สมรส: สอาด' },
+      'นิพนธ์':      { cards: ['นิวัฒน์','โฆษิต · 吴敏能','นก','ปู'], gender: ['blue','blue','blue','pink'], note: 'คู่สมรส: สอาด' },
       'ยุทธ':        { cards: ['ปุ่น','เสริมศักดิ์','เล็ก'], gender: ['pink','blue','pink'], note: 'คู่สมรส: แสงจันทร์' },
       'แสงสุรีย์':   { cards: ['พัชรี','อนุกูล','พิณรัตน์','จารุวัฒน์','ก้อย','อัญชลี','?'], gender: ['gray','gray','pink','blue','gray','gray','gray'], note: 'คู่สมรส: สมเกียรติ ก้วยไข่มุก' },
       'ถนัด':        { cards: ['มณี','คมเดช','เดียร์'], gender: ['pink','blue','gray'], note: 'คู่สมรส: สุภาภรณ์' },
@@ -537,14 +723,16 @@
     };
 
     const gen17Data = {
-      'ณัฐ':        { cards: ['?'], gender: ['gray'] },
-      'หมิว':       { cards: ['?','?'], gender: ['gray','gray'] },
+      'ณัฐ':        { cards: ['ซานซี · 吴山曦'], gender: ['gray'], note: 'คู่สมรส: ออม' },
+      'หมิว':       { cards: ['เอซ','เบลซ'], gender: ['gray','gray'], note: 'คู่สมรส: เอ็กซ์' },
       'ปิยะ':       { cards: ['ศรุจตา','วริศ'], gender: ['gray','gray'] },
-      'ประวัติ_14_2': { cards: ['?'], gender: ['gray'] },
-      'ประเสริฐ_14_2': { cards: ['?','?'], gender: ['blue','blue'] },
-      'ฝ14_1_2':    { cards: ['?','?','?','?','?'], gender: ['gray','gray','gray','gray','gray'] },
+      'ประวัติ_14_2':   { cards: ['?'], gender: ['gray'] },
+      'ประวิทย์_14_2':  { cards: ['?','?'], gender: ['gray','gray'] },
+      'ซุ้ยอึ๊ม_14_2':  { cards: ['?'], gender: ['gray'] },
+      'หลี่ชุ้น':  { cards: ['?','?'], gender: ['gray','gray'] },
+      'จู๊':        { cards: ['?'], gender: ['gray'] },
       'นิวัฒน์':    { cards: ['?','?'], gender: ['gray','gray'] },
-      'โฆษิต':      { cards: ['?','เบญจพร'], gender: ['gray','gray'] },
+      'โฆษิต · 吴敏能': { cards: ['?','เบญจพร'], gender: ['gray','gray'] },
       'นก':         { cards: ['เจตริน','?'], gender: ['gray','gray'] },
       'ปู':         { cards: ['พิชชารีย์'], gender: ['gray'] },
       'เสริมศักดิ์': { cards: ['?','?'], gender: ['gray','gray'] },
@@ -558,9 +746,9 @@
     let activeBtn = null;
 
     function showGen16(name, btn) {
-      if (activeBtn) activeBtn.classList.remove('active');
+      if (activeGen15Btn) activeGen15Btn.classList.remove('active');
       btn.classList.add('active');
-      activeBtn = btn;
+      activeGen15Btn = btn;
 
       const data = gen16Data[name];
       const container = document.getElementById('gen16-children');
@@ -615,6 +803,29 @@
       document.getElementById('gen17-section').style.display = 'block';
       document.getElementById('arrow17').style.display = 'block';
     }
+
+    // ── Default: เปิดสาย 鳳廷公 > ชัยยา เมื่อโหลดหน้า ──
+    window.addEventListener('DOMContentLoaded', () => {
+      // คลิก 岐奕公
+      const card13 = document.querySelector('[onclick="showGen14(\'岐奕公\', this)"]');
+      if (card13) showGen14('岐奕公', card13);
+
+      // คลิก 鳳廷公
+      setTimeout(() => {
+        const card14 = document.querySelector('[onclick="showGen15(\'จุกฮ้อ\', this)"]');
+        if (card14) showGen15('จุกฮ้อ', card14);
+
+        // คลิก ชัยยา
+        setTimeout(() => {
+          const btns = document.querySelectorAll('#gen15-buttons .gen15-btn');
+          btns.forEach(btn => {
+            if (btn.textContent.includes('ชัยยา')) {
+              showGen16('ชัยยา', btn);
+            }
+          });
+        }, 50);
+      }, 50);
+    });
   </script>
 
   <!-- end container -->
