@@ -388,6 +388,7 @@
     <div class="card card-teal" style="border-width:2px;">
       <div class="name-zh">岐奕公</div>
       <div class="name-reading">Qí Yì Gōng · Ki Yak Gung</div>
+      <div class="name-reading">ซั้มยิด เซี่ยงอึ๋ง</div>
     </div>
     <div class="card card-gray"><div class="name-zh">岐宗公</div></div>
     <div class="card card-gray"><div class="name-zh">岐应公</div></div>
@@ -406,13 +407,19 @@
     📍 บ้านห้วยกระบอก อำเภอบ้านโป่ง จังหวัดราชบุรี
   </div>
   <div class="siblings-row">
-    <div class="card card-gray">
+    <div class="card card-blue">
       <div class="name-zh">鳳泰公 / 劲好公</div>
       <div class="name-reading">Fèng Tài / Jìn Hǎo · Fung Thai / Jin Ho</div>
+      <div class="name-reading">เคี่ยงฮ้อ เซี่ยงอึ๋ง</div>
     </div>
-    <div class="card card-teal" style="border-width:2px;">
+    <div class="card card-pink">
+      <div class="name-zh">อากู๊</div>
+      <div class="name-reading">เจือเนี้ย เซี่ยงกี้ · อากู๊</div>
+    </div>
+    <div class="card card-blue" style="border-width:2px;">
       <div class="name-zh">鳳廷公 / 足好公</div>
       <div class="name-reading">Fèng Tíng / Zú Hǎo · Fung Ten / Juk Ho</div>
+      <div class="name-reading">จุกฮ้อ เซี่ยงอึ๋ง · หยุง เซี่ยงหว่อง</div>
     </div>
   </div>
 
@@ -450,18 +457,31 @@
   </style>
 
   <div class="gen15-selector">
-    <button class="gen15-btn male"     onclick="showGen16('สุมิตร',   this)">สุมิตร</button>
-    <button class="gen15-btn male"     onclick="showGen16('ก้อง',     this)">ก้อง</button>
-    <button class="gen15-btn male"     onclick="showGen16('ยุทธ',     this)">ยุทธ</button>
-    <button class="gen15-btn female"   onclick="showGen16('แสงสุรีย์',this)">แสงสุรีย์</button>
-    <button class="gen15-btn male"     onclick="showGen16('ถนัด',     this)">ถนัด</button>
-    <button class="gen15-btn female"   onclick="showGen16('เสี่ยมถอ', this)">เสี่ยมถอ</button>
-    <button class="gen15-btn male"     onclick="showGen16('เกียรติ',  this)">เกียรติ</button>
-    <button class="gen15-btn male"     onclick="showGen16('เจน',      this)">เจน</button>
-    <button class="gen15-btn male"     onclick="showGen16('ก๊า',      this)">ก๊า</button>
-    <button class="gen15-btn male"     onclick="showGen16('เสียง',    this)">เสียง</button>
-    <button class="gen15-btn male"     onclick="showGen16('ชัยยา',    this)">ชัยยา</button>
-    <button class="gen15-btn female"   onclick="showGen16('สมทรง',   this)">สมทรง</button>
+    <div style="width:100%; font-size:12px; color:var(--text-muted); margin-bottom:6px; padding-left:4px;">เคี่ยงฮ้อ (鳳泰公)</div>
+    <button class="gen15-btn male"     onclick="showGen16('ฝ14_1_1', this)">ลูก 1</button>
+    <button class="gen15-btn female"   onclick="showGen16('ฝ14_1_2', this)">ลูก 2</button>
+    <button class="gen15-btn male"     onclick="showGen16('ฝ14_1_3', this)">ลูก 3</button>
+
+    <div style="width:100%; font-size:12px; color:var(--text-muted); margin:10px 0 6px; padding-left:4px;">เจือเนี้ย เซี่ยงกี้ · อากู๊</div>
+    <button class="gen15-btn male"     onclick="showGen16('ประเสริฐ_14_2', this)">ประเสริฐ</button>
+    <button class="gen15-btn male"     onclick="showGen16('ประวัติ_14_2',  this)">ประวัติ</button>
+    <button class="gen15-btn male"     onclick="showGen16('ฝ14_2_3', this)">ลูก 3</button>
+    <button class="gen15-btn male"     onclick="showGen16('ฝ14_2_4', this)">ลูก 4</button>
+    <button class="gen15-btn female"   onclick="showGen16('ฝ14_2_5', this)">ลูก 5</button>
+
+    <div style="width:100%; font-size:12px; color:var(--text-muted); margin:10px 0 6px; padding-left:4px;">จุกฮ้อ (鳳廷公) · หยุง เซี่ยงหว่อง</div>
+    <button class="gen15-btn male"     onclick="showGen16('สุมิตร',      this)">สุมิตร</button>
+    <button class="gen15-btn male"     onclick="showGen16('นิพนธ์',      this)">นิพนธ์ (ก้อง)</button>
+    <button class="gen15-btn male"     onclick="showGen16('ยุทธ',        this)">ยุทธ</button>
+    <button class="gen15-btn female"   onclick="showGen16('แสงสุรีย์',   this)">แสงสุรีย์</button>
+    <button class="gen15-btn male"     onclick="showGen16('ถนัด',        this)">ถนัด</button>
+    <button class="gen15-btn female"   onclick="showGen16('เสี่ยมถอ',   this)">แสงศิริ (เสี่ยมถอ)</button>
+    <button class="gen15-btn male"     onclick="showGen16('เกียรติ',     this)">เกียรติ</button>
+    <button class="gen15-btn male"     onclick="showGen16('เจน',         this)">เจน · 吳永增</button>
+    <button class="gen15-btn male"     onclick="showGen16('บุญชัย',      this)">บุญชัย (ก๊า)</button>
+    <button class="gen15-btn male"     onclick="showGen16('บุญมา',       this)">บุญมา</button>
+    <button class="gen15-btn male"     onclick="showGen16('ชัยยา',       this)">ชัยยา · 吳永龍</button>
+    <button class="gen15-btn female"   onclick="showGen16('สมทรง',      this)">สมทรง</button>
   </div>
 
   <div class="arrow-down" id="arrow16" style="display:none;">↓</div>
@@ -491,23 +511,48 @@
 
   <script>
     const gen16Data = {
-      'สุมิตร':    { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
-      'ก้อง':     { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
-      'ยุทธ':     { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
-      'แสงสุรีย์':{ cards: ['?','?','?','?','?','?'], gender: ['gray','gray','gray','gray','gray','gray'] },
-      'ถนัด':     { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
-      'เสี่ยมถอ': { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
-      'เกียรติ':  { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
-      'เจน':      { cards: ['โจ้','โต้ง','ณัฐ','หมิว'], gender: ['blue','blue','blue','pink'], note: 'คู่สมรส: หลัน' },
-      'ก๊า':      { cards: ['?','?'], gender: ['gray','gray'] },
-      'เสียง':    { cards: ['?','?'], gender: ['gray','gray'] },
-      'ชัยยา':    { cards: ['?','?'], gender: ['gray','gray'] },
-      'สมทรง':   { cards: ['?','?','?','?','?'], gender: ['gray','gray','gray','gray','gray'] },
+      // ลูกของ เคี่ยงฮ้อ (鳳泰公)
+      'ฝ14_1_1': { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
+      'ฝ14_1_2': { cards: ['?','?','?','?','?'], gender: ['gray','gray','gray','gray','gray'] },
+      'ฝ14_1_3': { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
+      // ลูกของ หญิงคนกลาง
+      'ประเสริฐ_14_2': { cards: ['?','?'], gender: ['blue','blue'] },
+      'ประวัติ_14_2':  { cards: ['?'], gender: ['gray'] },
+      'ฝ14_2_3': { cards: ['?'], gender: ['gray'] },
+      'ฝ14_2_4': { cards: ['?'], gender: ['gray'] },
+      'ฝ14_2_5': { cards: ['?'], gender: ['pink'] },
+      // ลูกของ จุกฮ้อ (鳳廷公)
+      'สุมิตร':      { cards: ['ประจักษ์','ประเสริฐ','วริศรา','ปิยะ'], gender: ['gray','gray','gray','blue'], note: 'คู่สมรส: ศรีสุวรรณ' },
+      'นิพนธ์':      { cards: ['นิวัฒน์','โฆษิต','นก','ปู'], gender: ['blue','blue','blue','pink'], note: 'คู่สมรส: สอาด' },
+      'ยุทธ':        { cards: ['ปุ่น','เสริมศักดิ์','เล็ก'], gender: ['pink','blue','pink'], note: 'คู่สมรส: แสงจันทร์' },
+      'แสงสุรีย์':   { cards: ['พัชรี','อนุกูล','พิณรัตน์','จารุวัฒน์','ก้อย','อัญชลี','?'], gender: ['gray','gray','pink','blue','gray','gray','gray'], note: 'คู่สมรส: สมเกียรติ ก้วยไข่มุก' },
+      'ถนัด':        { cards: ['มณี','คมเดช','เดียร์'], gender: ['pink','blue','gray'], note: 'คู่สมรส: สุภาภรณ์' },
+      'เสี่ยมถอ':    { cards: ['ปฐมกุล','โกสินทร์','รัตนา'], gender: ['blue','blue','gray'], note: 'คู่สมรส: ธง ภูศรี' },
+      'เกียรติ':     { cards: ['นิติ','ปิตินันท์','ณิชนันต์'], gender: ['blue','pink','pink'], note: 'คู่สมรส: นันทา' },
+      'เจน':         { cards: ['โจ้ · 吴明合','โต้ง','ณัฐ','หมิว'], gender: ['blue','blue','blue','pink'], note: 'คู่สมรส: หลัน' },
+      'บุญชัย':      { cards: ['เจนวิทย์','วริษฐา'], gender: ['blue','pink'], note: 'คู่สมรส: จันเพ็ญ' },
+      'บุญมา':       { cards: ['แก้ม','กนกพร'], gender: ['gray','gray'] },
+      'ชัยยา':       { cards: ['สกลภูริ์','กนกภพ'], gender: ['gray','gray'], note: 'คู่สมรส: วัลภา' },
+      'สมทรง':      { cards: ['แอน','คิ้น','เที่ยม','เมิร์ฟ','ซั้น'], gender: ['pink','blue','blue','blue','blue'], note: 'คู่สมรส: กิตติศักดิ์ จุติโชติพงศ์' },
     };
 
     const gen17Data = {
-      'ณัฐ': { cards: ['?'], gender: ['gray'] },
-      'หมิว': { cards: ['?','?'], gender: ['gray','gray'] },
+      'ณัฐ':        { cards: ['?'], gender: ['gray'] },
+      'หมิว':       { cards: ['?','?'], gender: ['gray','gray'] },
+      'ปิยะ':       { cards: ['ศรุจตา','วริศ'], gender: ['gray','gray'] },
+      'ประวัติ_14_2': { cards: ['?'], gender: ['gray'] },
+      'ประเสริฐ_14_2': { cards: ['?','?'], gender: ['blue','blue'] },
+      'ฝ14_1_2':    { cards: ['?','?','?','?','?'], gender: ['gray','gray','gray','gray','gray'] },
+      'นิวัฒน์':    { cards: ['?','?'], gender: ['gray','gray'] },
+      'โฆษิต':      { cards: ['?','เบญจพร'], gender: ['gray','gray'] },
+      'นก':         { cards: ['เจตริน','?'], gender: ['gray','gray'] },
+      'ปู':         { cards: ['พิชชารีย์'], gender: ['gray'] },
+      'เสริมศักดิ์': { cards: ['?','?'], gender: ['gray','gray'] },
+      'พิณรัตน์':   { cards: ['?','?'], gender: ['gray','gray'] },
+      'จารุวัฒน์':  { cards: ['?','?','?'], gender: ['gray','gray','gray'] },
+      'มณี':        { cards: ['?'], gender: ['gray'] },
+      'คมเดช':      { cards: ['?','?'], gender: ['gray','gray'] },
+      'โกสินทร์':   { cards: ['?','?'], gender: ['gray','gray'] },      'เจนวิทย์':   { cards: ['?'], gender: ['gray'] },
     };
 
     let activeBtn = null;
@@ -572,27 +617,7 @@
     }
   </script>
 
-  <!-- Legend -->
-  <div class="note-box">
-    ข้อมูลจากแผนภูมิ 丰俊公房世馨公之德英公世系
-  </div>
-
-  <!-- ประวัติแซ่ 吳 -->
-  <div style="margin-top:32px;">
-    <div class="section-label">
-      <span class="gen-badge">ประวัติแซ่ 吳</span>
-      <div class="gen-line"></div>
-    </div>
-    <div style="background:white; border-radius:14px; padding:20px 24px; box-shadow:var(--shadow); border:1px solid var(--border); line-height:1.9; color:var(--text);">
-      <div style="font-size:28px; font-weight:700; font-family:'Noto Sans TC',sans-serif; margin-bottom:4px; color:var(--teal-800);">吳 · Ng (งฺ)</div>
-      <div style="font-size:12px; color:var(--text-muted); margin-bottom:16px;">สำเนียงแคะ · แซ่อันดับที่ 10 ของจีน · มีประวัติกว่า 2,600 ปี</div>
-
-      <p style="margin-bottom:12px;">แซ่ 吳 สืบเชื้อสายจากวงศ์ 姬 ซึ่งเป็นลูกหลานตรงของ <strong>黄帝 (จักรพรรดิเหลือง)</strong> โดยมีต้นกำเนิดจาก <strong>太伯 (ไท่โป)</strong> และ <strong>仲雍 (จ้งยง)</strong> สองพี่น้องที่สละราชสมบัติให้น้องชาย แล้วอพยพลงใต้ตั้งอาณาจักร <strong>句吳</strong> ขึ้นในแถบเจียงหนาน <a href="https://zh.wikipedia.org/wiki/%E5%90%B4%E5%A7%93" target="_blank" style="color:var(--teal-400); font-size:11px;">[Wikipedia]</a></p>
-
-      <p style="margin-bottom:12px;">เมื่ออาณาจักรอู๋ถูก <strong>越国 (เวียดนามโบราณ)</strong> ทำลายในปี 473 ก่อนคริสตกาล ลูกหลานจึงใช้ชื่ออาณาจักรเป็นแซ่ว่า <strong>吳</strong> มีประวัติกว่า 2,600 ปี <a href="https://zh.wikipedia.org/wiki/%E5%90%B4%E5%A7%93" target="_blank" style="color:var(--teal-400); font-size:11px;">[Wikipedia]</a></p>
-
-    </div>
-  </div>
+  <!-- end container -->
 
 </div>
 
